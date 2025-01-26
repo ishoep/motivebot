@@ -7,14 +7,12 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from asyncio import run_coroutine_threadsafe
 
-# Configure logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
 
-# List of motivational quotes
 QUOTES = [
     "Believe in yourself and all that you are.",
     "Your limitation—it’s only your imagination.",
@@ -25,7 +23,6 @@ QUOTES = [
     "The harder you work for something, the greater you’ll feel when you achieve it."
 ]
 
-# Dictionary to store user-specific schedules
 user_schedules = {}
 scheduler = BackgroundScheduler()
 scheduler.start()
