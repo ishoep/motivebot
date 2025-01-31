@@ -64,7 +64,6 @@ async def schedule_quote(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     # Получаем текущий событийный цикл
     loop = asyncio.get_running_loop()
 
-    # Добавляем новую задачу с передачей аргументов
     trigger = IntervalTrigger(minutes=interval_minutes)
     job = scheduler.add_job(
         send_quote,
